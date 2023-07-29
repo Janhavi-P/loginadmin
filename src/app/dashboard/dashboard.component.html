@@ -1,0 +1,32 @@
+<p>dashboard works!</p>
+<h1>Angular 13 HttpClient for Sending Http Request Example - ItSolutionStuff.com</h1>
+<button >btn</button>
+
+    
+
+<table border="2">
+    <tr>
+        <th>symbol</th>   
+        <th>identifier</th>
+        <th>open</th>
+        <th>dayHigh</th>
+        <th>dayLow</th>
+        <th>lastPrice</th>
+        <th>previousClose</th>
+        <th>change</th>
+        <th>pChange</th>
+    </tr>
+   <tr *ngFor="let item of arrayStock">
+    <td>{{item.symbol}}</td>
+    <td>{{item.identifier}}</td>
+    <td>{{item.open}}</td>
+    <td>{{item.dayHigh}}</td>
+    <td>{{item.dayLow}}</td>
+    <td>{{item.lastPrice}}</td>
+    <td>{{item.previousClose}}</td>
+    <td>{{item.change}}</td>
+    <td>{{item.pChange}}</td>
+   </tr>
+        
+   
+</table>

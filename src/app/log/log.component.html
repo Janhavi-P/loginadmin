@@ -1,30 +1,11 @@
 <mat-card>
     <mat-card-content>
       <div class="header">
-        <P>Sign Into Your Account </P>
+        <P>Login into Your Account </P>
       </div>
-      <form (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
-        <div class="emailInput1">
-          <mat-form-field class="half-width" appearance="outline">
-            <mat-label>First Name</mat-label>
-            <input
-              formControlName="FirstName"
-              matInput
-              placeholder="Enter first name" required
-            />
-          </mat-form-field>
-          
-          <mat-form-field class="width1" appearance="outline">
-            <mat-label>Last Name</mat-label>
-            <input
-              formControlName="LastName"
-              matInput
-              placeholder="Enter Last name" required
-            />
-          </mat-form-field>
-       
 
-        </div>
+      <form (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
+
         <div class="emailInput">
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Email</mat-label>
@@ -57,22 +38,9 @@
           </mat-error>
         </mat-form-field>
         </div>
-        <button mat-flat-button color="primary" routerLink="/dashboard">CREATE ACCOUNT</button>
-        
+       
+        <button (click) ="todashboard()" >LOGIN</button> 
+       
       </form>
-
-      <div class="button-row">
-        <p>Already have an Account ?</p>
-       
-      </div>
-      <div>
-        <!--<span>
-          <a routerLink="/log" class="nav-link"  routerLinkActive="active">Login</a>
-        </span>-->
-        <a routerLink="/log" class="nav-link"  routerLinkActive="active">Login</a>
-       
-      </div>
-     <!-- <button (click)="on">login</button>-->
     </mat-card-content>
-    
   </mat-card>
