@@ -14,13 +14,38 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserServiceService } from './user-service.service';
 import { CommonModule } from '@angular/common';
+import { NavbarComponent } from './navbar/navbar.component';
+import {MatToolbarModule } from '@angular/material/toolbar';
+import { AgGridModule } from 'ag-grid-angular';
+import {MatTableModule} from '@angular/material/table';
+import { HomeComponent } from './home/home.component';
+import { Navbar2Component } from './navbar2/navbar2.component';
+import { ProfitComponent } from './profit/profit.component';
+import { FormsModule } from '@angular/forms';
+import { StockListComponent } from './stock-list/stock-list.component';
+
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { SaveButtonRendererComponent } from './save-button-renderer/save-button-renderer.component';
+import { ButtonRendererComponent } from './button-renderer/button-renderer.component';
+import { SavedStocksComponent } from './saved-stocks/saved-stocks.component';
+import { LogOutComponent } from './log-out/log-out.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     LogComponent,
-    DashboardComponent
+    DashboardComponent,
+    NavbarComponent,
+    HomeComponent,
+    Navbar2Component,
+    ProfitComponent,
+    StockListComponent,
+    SaveButtonRendererComponent,
+    ButtonRendererComponent,
+    SavedStocksComponent,
+    LogOutComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -32,7 +57,12 @@ import { CommonModule } from '@angular/common';
     ReactiveFormsModule,
     MatIconModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    MatToolbarModule,
+    AgGridModule,
+    MatTableModule,
+    FormsModule,
+    MatProgressSpinnerModule
   ],
   providers: [UserServiceService],
   bootstrap: [AppComponent]

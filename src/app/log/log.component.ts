@@ -41,7 +41,7 @@ export class LogComponent implements OnInit {
   //   console.log(this.loginForm.value);
    }
   todashboard(): void {
-    this.router.navigate(['/dashboard']);
+    this.router.navigate(['/home']);
   }
   
 }

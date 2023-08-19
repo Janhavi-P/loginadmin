@@ -1,32 +1,16 @@
-<p>dashboard works!</p>
-<h1>Angular 13 HttpClient for Sending Http Request Example - ItSolutionStuff.com</h1>
-<button >btn</button>
 
-    
+<div style="background-color: black; color: azure;display: flex;justify-content: center;margin-top: -47%;">
 
-<table border="2">
-    <tr>
-        <th>symbol</th>   
-        <th>identifier</th>
-        <th>open</th>
-        <th>dayHigh</th>
-        <th>dayLow</th>
-        <th>lastPrice</th>
-        <th>previousClose</th>
-        <th>change</th>
-        <th>pChange</th>
-    </tr>
-   <tr *ngFor="let item of arrayStock">
-    <td>{{item.symbol}}</td>
-    <td>{{item.identifier}}</td>
-    <td>{{item.open}}</td>
-    <td>{{item.dayHigh}}</td>
-    <td>{{item.dayLow}}</td>
-    <td>{{item.lastPrice}}</td>
-    <td>{{item.previousClose}}</td>
-    <td>{{item.change}}</td>
-    <td>{{item.pChange}}</td>
-   </tr>
-        
-   
-</table>
+<ag-grid-angular
+    style= "width:100%;height:700px;"
+    class= "ag-theme-alpine"
+    [rowData]= "rowData"
+    [columnDefs]= "colDefs"
+    [pagination]= "true"
+       >
+</ag-grid-angular>
+</div>
+<div style="margin-top: -50%;">
+    <app-navbar></app-navbar>
+    <router-outlet></router-outlet> 
+    </div>

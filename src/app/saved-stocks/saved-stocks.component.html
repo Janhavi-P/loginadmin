@@ -1,0 +1,45 @@
+<!-- saved-stocks.component.html -->
+<div style="margin-top:-50%">
+    <app-navbar></app-navbar>
+  <router-outlet></router-outlet>
+  </div>
+<div style=" margin-top:5%;color: aliceblue;margin-left:20%;width: 30%;height:50vh;"*ngIf="savedStocks.length > 0">
+    <mat-table *ngIf="savedStocks.length > 0" [dataSource]="savedStocks" class="custom-table">
+        <ng-container matColumnDef="serialNo">
+          <mat-header-cell *matHeaderCellDef> Sr No </mat-header-cell>
+          <mat-cell *matCellDef="let stock; let i = index">{{ i + 1 }}</mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="symbol">
+          <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+          <mat-cell *matCellDef="let stock"> {{ stock.symbol }} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="NSE">
+            <mat-header-cell *matHeaderCellDef> NSE </mat-header-cell>
+            <mat-cell *matCellDef="let stock"> {{ stock.nseValue}} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="BSE">
+            <mat-header-cell *matHeaderCellDef> BSE </mat-header-cell>
+            <mat-cell *matCellDef="let stock"> {{ stock.bseValue }} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="profitablity">
+            <mat-header-cell *matHeaderCellDef> Profitability </mat-header-cell>
+            <mat-cell *matCellDef="let stock"> {{ stock.profitability }} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="buy">
+            <mat-header-cell *matHeaderCellDef> Buy From </mat-header-cell>
+            <mat-cell *matCellDef="let stock"> {{ stock.buyFrom }} </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="sell">
+            <mat-header-cell *matHeaderCellDef> Sell To </mat-header-cell>
+            <mat-cell *matCellDef="let stock"> {{ stock.sellTo}} </mat-cell>
+          </ng-container>
+        <!-- Define other columns here -->
+        <mat-header-row *matHeaderRowDef="['serialNo', 'symbol','NSE','BSE','profitablity','buy','sell']"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: ['serialNo', 'symbol','NSE','BSE','profitablity','buy','sell']"></mat-row>
+      </mat-table>
+      
+  </div>
+  <div style=" margin-top:20%; color: aliceblue; margin-left: 45%;"*ngIf="savedStocks.length === 0">
+    <p style="font-size: larger;font-weight: 500;">No saved stocks yet.</p>
+  </div>
+  
